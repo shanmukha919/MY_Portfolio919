@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmukha Potturi | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for resume functionality */
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            position: relative;
+            height: 85vh;
+        }
+        
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .close:hover {
+            color: black;
+        }
+        
+        .fallback-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+        }
+        
+        #resumeViewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Shanmukha Portfolio is Loading...</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Welcome To My World..</a>
+
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Shanmukha Potturi</span></h1>
+            <div class="text-animate">
+                <h3></h3>
+            </div>
+            <p>A passionate developer specializing in modern web technologies. I create efficient, scalable, and user-friendly solutions to solve real-world problems.</p>
+            
+            <div class="btn-box">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#about" class="btn">About Me</a>
+            </div>
+
+            <div class="social-container">
+                <a href="https://github.com/shanmukha919" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://web.whatsapp.com/" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="image/shanmukha.jpg" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="image/shanmukha.jpg" alt="Profile">
+                <span class="circle-spin"></span>
+            </div>
+
+            <div class="about-content">
+                <h3>Full Stack Developer</h3>
+                <ul class="skills-list">
+                    <li>My journey began at TVS Brakes India PVT LMT Company and has evolved into a passion for creating digital solutions with 3 years of professional experience in manufacturing in the development department</li>
+                    <li>Familiar with frontend and backend development</li>
+                    <li>Experience with modern web technologies</li>
+                </ul>
+                
+                <!-- Personal Info Section -->
+                <div class="personal-info">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span><strong>Age:</strong> 22</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span><strong>Country:</strong> India</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><strong>Email:</strong> potturishanmukha919@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-venus-mars"></i>
+                        <span><strong>Gender:</strong> Male</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span><strong>Work:</strong> Student</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-language"></i>
+                        <span><strong>Language:</strong> Telugu, English, Hindi, Tamil</span>
+                    </div>
+                </div>
+
+                <!-- Resume Buttons -->
+                <div class="btn-container">
+                    <button class="btn" onclick="viewResume()">
+                        <i class="fas fa-file-alt"></i> View Resume
+                    </button>
+                    <button class="btn" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </div>
+
+                <!-- Modal for viewing resume -->
+                <div id="resumeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <iframe id="resumeViewer" src="" frameborder="0"></iframe>
+                        <div class="fallback-message" style="display:none;">
+                            <p>Unable to display PDF preview. Please download the resume instead.</p>
+                            <button class="btn" onclick="downloadResume()">
+                                <i class="fas fa-download"></i> Download Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience/Education Tabs -->
+                <div class="tab-titles">
+                    <h4 class="tab-links active-link" onclick="opentab('experience', event)">Experience</h4>
+                    <h4 class="tab-links" onclick="opentab('education', event)">Education</h4>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-contents active-tab" id="experience">
+                    <div class="education-card">
+                        <div class="education-logo">
+                            <img src="image/tvs.jpeg" alt="TVS Brakes Logo">
+                        </div>
+                        <div class="education-content">
+                            <h3>T.V.S Brakes India PVT LMT</h3>
+                            <span class="grade">JTE - Grade</span>
+                            <span class="location">Naidupeta, Andhra Pradesh</span>
+                            <span class="duration">2021 - 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div class="tab-contents" id="education">
+                    <div class="education-container">
+                        <!-- KL University -->
+                        <div class="education-card">
+                            <div class="education-logo">
+                                <img src="image/klu.jpeg" alt="KL University Logo">
+                            </div>
+                            <div class="education-content">
+                                <h3>KL University</h3>
+                                <span class="grade">9.14 CGPA</span>
+                                <span class="location">Vijayawada, AP</span>
+                                <span class="duration">2024 - 2027</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Nettur Technical Training Foundation -->
+                        <div class="education-card">
+                            <div class="education-logo">
+                                <img src="image/nttf.jpeg" alt="Nettur Technical Training Foundation Logo">
+                            </div>
+                            <div class="education-content">
+                                <h3>Nettur Technical Training Foundation</h3>
+                                <span class="grade">8.67 CGPA</span>
+                                <span class="location">Gannavaram, AP</span>
+                                <span class="duration">2018 - 2021</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Ravindra Bharathi Public School -->
+                        <div class="education-card">
+                            <div class="education-logo">
+                                <img src="image/rbps.gif" alt="Ravindra Bharathi Public School Logo">
+                            </div>
+                            <div class="education-content">
+                                <h3>Ravindra Bharathi Public School</h3>
+                                <span class="grade">9.3 CGPA</span>
+                                <span class="location">Satya Narayanapuram, Vijayawada, Andhra Pradesh</span>
+                                <span class="duration">2018 - Passout</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Resume functionality
+        const resumePDF = "image/shanmukharesume.pdf";
+        
+        function viewResume() {
+            const modal = document.getElementById("resumeModal");
+            const viewer = document.getElementById("resumeViewer");
+            const fallback = document.querySelector(".fallback-message");
+            
+            modal.style.display = "block";
+            viewer.style.display = "block";
+            fallback.style.display = "none";
+            
+            // Try to display the PDF directly
+            viewer.src = resumePDF + "#toolbar=0&navpanes=0";
+            
+            // Add fallback in case PDF can't be displayed
+            viewer.onerror = function() {
+                viewer.style.display = "none";
+                fallback.style.display = "block";
+            };
+            
+            // Prevent scrolling when modal is open
+            document.body.style.overflow = "hidden";
+        }
+        
+        function downloadResume() {
+            // Create a temporary anchor element to trigger download
+            const link = document.createElement("a");
+            link.href = resumePDF;
+            link.download = "Shanmukha_Potturi_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        function closeModal() {
+            document.getElementById("resumeModal").style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling
+        }
+        
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            const modal = document.getElementById("resumeModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Tab functionality
+        function opentab(tabname, event) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            
+            // Remove active class from all tab links
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            
+            // Hide all tab contents
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            // Add active class to clicked tab link
+            event.currentTarget.classList.add("active-link");
+            
+            // Show the corresponding tab content
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Section</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .heading {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .heading span {
+            color: #0ef;
+        }
+        
+        .heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #0ef;
+            border-radius: 2px;
+        }
+        
+        /* Education Section Styles */
+        .education {
+            padding: 80px 15% 60px;
+            background: #f5f5f5;
+        }
+        
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .education-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #0ef, #0077ff);
+        }
+        
+        .education-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+        
+        .education-logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+        
+        .education-content {
+            flex: 1;
+        }
+        
+        .education-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .education-content .grade {
+            display: inline-block;
+            background: #0ef;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .education-content .location {
+            display: block;
+            color: #666;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .education-content .duration {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .education {
+                padding: 60px 5%;
+            }
+            
+            .education-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .education-logo {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head> -->
+
+</html>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="55%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="55%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="50%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fas fa-drafting-compass"></i>  <!-- Engineering/Drawing icon -->
+                <h3>Engneering Drawaing</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="95%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <i class="fab fa-figma"></i>  <!-- Figma icon -->
+                <h3>Figma</h3>
+                <div class="skill-meter">
+                    <div class="skill-progress" data-percent="70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Project 1">
+                <div class="portfolio-layer">
+                    <h4>E-Commerce Platform</h4>
+                    <p>Full-featured online store with payment integration</p>
+                    <div class="tech-used">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">MongoDB</span>
+                    </div>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" alt="Project 2">
+                <div class="portfolio-layer">
+                    <h4>Task Management App</h4>
+                    <p>Productivity application with real-time collaboration</p>
+                    <div class="tech-used">
+                        <span class="tech-pill">Vue.js</span>
+                        <span class="tech-pill">Firebase</span>
+                        <span class="tech-pill">WebSockets</span>
+                    </div>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Project 3">
+                <div class="portfolio-layer">
+                    <h4>Health Analytics Dashboard</h4>
+                    <p>Data visualization for healthcare metrics</p>
+                    <div class="tech-used">
+                        <span class="tech-pill">D3.js</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Flask</span>
+                    </div>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Project 4">
+                <div class="portfolio-layer">
+                    <h4>Social Media API</h4>
+                    <p>Scalable backend for social networking platform</p>
+                    <div class="tech-used">
+                        <span class="tech-pill">GraphQL</span>
+                        <span class="tech-pill">TypeScript</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                    </div>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+    
+        <form id="contact-form">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <i class="fas fa-user"></i>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                <div class="input-field">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <i class="fas fa-envelope"></i>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="input-field">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                    <i class="fas fa-phone"></i>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+            </div>
+    
+            <div class="textarea-field">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <i class="fas fa-comment"></i>
+                <div class="error-message" id="message-error"></div>
+            </div>
+    
+            <div class="form-status" id="form-status"></div>
+    
+            <button type="submit" class="btn" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loader" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </span>
+            </button>
+        </form>
+    </section>
+    
+    <style>
+        /* Contact Form Styles */
+        .contact {
+            padding: 2rem 9%;
+            background: var(--bg-color);
+        }
+    
+        .contact form {
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+        }
+    
+        .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    
+        .input-field {
+            position: relative;
+            width: 48%;
+            margin-bottom: 2rem;
+        }
+    
+        .textarea-field {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+    
+        .contact form .input-box input,
+        .contact form textarea {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: var(--second-bg-color);
+            border-radius: .8rem;
+            border: none;
+            outline: none;
+            padding-left: 3.5rem;
+        }
+    
+        .contact form textarea {
+            resize: none;
+            padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+            height: 20rem;
+        }
+    
+        .input-field i,
+        .textarea-field i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--main-color);
+            font-size: 1.5rem;
+        }
+    
+        .textarea-field i {
+            top: 2rem;
+        }
+    
+        .error-message {
+            color: #ff3333;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            text-align: left;
+            display: none;
+        }
+    
+        .form-status {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+    
+        .form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+    
+        .form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+    
+        #submit-btn {
+            position: relative;
+            min-width: 150px;
+        }
+    
+        .btn-loader {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        @media (max-width: 768px) {
+            .input-field {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+    
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                
+                // Name validation
+                const name = document.getElementById('name');
+                const nameError = document.getElementById('name-error');
+                if (name.value.trim() === '') {
+                    nameError.textContent = 'Name is required';
+                    nameError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    nameError.style.display = 'none';
+                }
+    
+                // Email validation
+                const email = document.getElementById('email');
+                const emailError = document.getElementById('email-error');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email.value.trim() === '') {
+                    emailError.textContent = 'Email is required';
+                    emailError.style.display = 'block';
+                    isValid = false;
+                } else if (!emailRegex.test(email.value)) {
+                    emailError.textContent = 'Please enter a valid email';
+                    emailError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    emailError.style.display = 'none';
+                }
+    
+                // Phone validation (optional but validate if provided)
+                const phone = document.getElementById('phone');
+                const phoneError = document.getElementById('phone-error');
+                if (phone.value.trim() !== '') {
+                    const phoneRegex = /^[0-9]{10,15}$/;
+                    if (!phoneRegex.test(phone.value)) {
+                        phoneError.textContent = 'Please enter a valid phone number';
+                        phoneError.style.display = 'block';
+                        isValid = false;
+                    } else {
+                        phoneError.style.display = 'none';
+                    }
+                }
+    
+                // Message validation
+                const message = document.getElementById('message');
+                const messageError = document.getElementById('message-error');
+                if (message.value.trim() === '') {
+                    messageError.textContent = 'Message is required';
+                    messageError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    messageError.style.display = 'none';
+                }
+    
+                return isValid;
+            }
+    
+            // Form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!validateForm()) {
+                    return;
+                }
+    
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoader.style.display = 'block';
+                submitBtn.disabled = true;
+    
+                // Simulate form submission (replace with actual AJAX call)
+                setTimeout(() => {
+                    // In a real implementation, you would use fetch or XMLHttpRequest here
+                    // For example:
+                    /*
+                    fetch('your-server-endpoint', {
+                        method: 'POST',
+                        body: new FormData(contactForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        showSuccessMessage();
+                    })
+                    .catch(error => {
+                        showErrorMessage();
+                    });
+                    */
+    
+                    // For demo purposes, we'll just show success
+                    showSuccessMessage();
+                    
+                    // Reset form and button state
+                    contactForm.reset();
+                    btnText.style.display = 'inline';
+                    btnLoader.style.display = 'none';
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+    
+            function showSuccessMessage() {
+                formStatus.textContent = 'Your message has been sent successfully!';
+                formStatus.className = 'form-status success';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            }
+    
+            function showErrorMessage() {
+                formStatus.textContent = 'There was an error sending your message. Please try again later.';
+                formStatus.className = 'form-status error';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            }
+    
+            // Real-time validation
+            document.getElementById('name').addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    document.getElementById('name-error').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('email').addEventListener('input', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(this.value)) {
+                    document.getElementById('email-error').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('phone').addEventListener('input', function() {
+                const phoneRegex = /^[0-9]{10,15}$/;
+                if (phoneRegex.test(this.value)) {
+                    document.getElementById('phone-error').style.display = 'none';
+                }
+            });
+    
+            document.getElementById('message').addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    document.getElementById('message-error').style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>created &copy; <span id="current-year"></span> by Shanmukha Potturi |
+                 All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Main content area - adjust as needed */
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
+        
+        footer a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Your portfolio content goes here -->
+        <h1>Thank you for your time</h1>
+        <p>This is where you can showcase your work and skills.</p>
+    </main>
+    
+    <footer>
+        <div class="gradient-footer">
+            <div class="flow-container">
+              <span class="flow-item">©<span id="current-year"></span></span>
+              <span class="flow-separator"></span>
+              <span class="flow-item">Made with</span>
+              <span class="flow-heart">❤️</span>
+              <span class="flow-item">by</span>
+              <a href="https://github.com/" class="flow-link" target="_blank">
+                <span class="flow-name">POTTURI SHANMUKHA</span>
+              </a>
+              <span class="flow-separator"></span>
+              <span class="flow-tech">Next.js</span>
+            </div>
+            <div class="gradient-bar"></div>
+          </div>
+          
+          <style>
+          .gradient-footer {
+            position: relative;
+            padding: 3rem 0;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+          }
+          
+          .flow-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            color: #555;
+            font-size: 14px;
+            position: relative;
+            z-index: 2;
+          }
+          
+          .flow-separator {
+            width: 1px;
+            height: 14px;
+            background: #ddd;
+          }
+          
+          .flow-heart {
+            color: #ff4757;
+            animation: pulse 2s infinite;
+          }
+          
+          .flow-link {
+            text-decoration: none;
+          }
+          
+          .flow-name {
+            color: #333;
+            font-weight: 500;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.3s;
+          }
+          
+          .flow-link:hover .flow-name {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+          }
+          
+          .flow-tech {
+            font-weight: 600;
+            color: #000;
+          }
+          
+          .gradient-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+            background-size: 300% 100%;
+            animation: gradientFlow 8s ease infinite;
+          }
+          
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+          }
+          
+          @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          </style>
+          
+          <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+          </script>
+    </footer>
+</body>
+</html>
