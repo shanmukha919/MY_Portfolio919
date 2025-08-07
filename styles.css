@@ -607,6 +607,7 @@ body {
             max-width: 600px;
             font-size:medium;
             color: white;
+            
         }
 
         .about-content h3 {
@@ -652,6 +653,7 @@ body {
         .info-item span strong {
             color: var(--dark-color);
             font-weight: 600;
+            
         }
 
         /* Buttons */
@@ -1457,4 +1459,85 @@ footer a:hover {
 }
  
 /* Resume */
+/* footer */
+
+.gradient-footer {
+  position: relative;
+  padding: 3rem 0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.flow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  color: #555;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.flow-separator {
+  width: 1px;
+  height: 14px;
+  background: #ddd;
+}
+
+.flow-heart {
+  color: #ff4757;
+  animation: pulse 2s infinite;
+}
+
+.flow-link {
+  text-decoration: none;
+}
+
+.flow-name {
+  color: #333;
+  font-weight: 500;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+}
+
+.flow-link:hover .flow-name {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+.flow-tech {
+  font-weight: 600;
+  color: #000;
+}
+
+.gradient-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+  background-size: 300% 100%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+
 

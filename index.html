@@ -140,9 +140,9 @@
 
             <div class="social-container">
                 <a href="https://github.com/shanmukha919" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://web.whatsapp.com/" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/919705477919" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>                  
+                <a href="https://www.instagram.com/shannu_potturi" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Potturi Shanmukha" class="social-icon"><i class="fab fa-facebook"></i></a>
             </div>
         </div>
 
@@ -952,16 +952,16 @@
     </script>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>created &copy; <span id="current-year"></span> by Shanmukha Potturi |
-                 All Rights Reserved.</p>
-        </div>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-text">
+        <p>Created by <span class="highlight-name">Shanmukha Potturi</span> | <span id="current-year"></span> All rights reserved.</p>
+    </div>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fas fa-arrow-up"></i></a>
-        </div>
-    </footer>
+    <div class="footer-iconTop">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+</footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -996,23 +996,18 @@
         }
         
         /* Footer styles */
-        footer {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-top: auto; /* Pushes footer to bottom */
-        }
-        
-        footer a {
-            color: #0d6efd;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
+       /* Highlight name style */
+.highlight-name {
+    color: var(--main-color);
+    font-weight: 600;
+    text-shadow: 0 0 5px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.highlight-name:hover {
+    color: var(--hover-color);
+    transform: scale(1.05);
+}
     </style>
 </head>
 <body>
@@ -1117,7 +1112,8 @@
           </style>
           
           <script>
-          document.getElementById('current-year').textContent = new Date().getFullYear();
+          // Set current year in footer (already in your script.js)
+document.getElementById('current-year').textContent = new Date().getFullYear();
           </script>
     </footer>
 </body>
